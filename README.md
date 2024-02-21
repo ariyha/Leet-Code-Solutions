@@ -5,4 +5,4 @@
 
 #📊 Stats
 
-https://leetcard.jacoblin.cool/nithishariyha02467?theme=dark&font=Rhodium%20Libre&ext=heatmap
+<img src="https://leetcard.jacoblin.cool/nithishariyha02467?theme=dark&font=Rhodium%20Libre&ext=heatmap">
