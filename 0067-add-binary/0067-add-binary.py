@@ -8,7 +8,7 @@ class Solution:
         while i >= 0 or j >= 0 or carry:
             if i >= 0:
                 carry += int(a[i])
-                i = i - 1
+                i =i- 1
 
             if j >= 0:
                 carry += int(b[j])
