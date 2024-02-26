@@ -1,6 +1,5 @@
 class Solution:
     def findLongestWord(self, s: str, dictionary: List[str]) -> str:
-        dictionary.sort()
         dictionary.sort(key=lambda x:len(x),reverse=True)
 
         for i in dictionary:
