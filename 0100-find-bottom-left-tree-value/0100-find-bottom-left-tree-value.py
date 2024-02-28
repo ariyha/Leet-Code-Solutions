@@ -8,20 +8,16 @@ class Solution:
     def findBottomLeftValue(self, root: Optional[TreeNode]) -> int:
         d=0
         val = root.val
-        visited=[]
-        stack=[(root,0)]
+        stack=[root]
 
         while(stack!=[]):
             x,curr_d = stack.pop(0)
             
-            
             val = x.val
                      
-            if x.right!=None and x.right not in visited:
-                stack.append((x.right,curr_d+1))
-                visited.append(x.right)
-            if x.left!=None and x.left not in visited:
-                visited.append(x.left)
-                stack.append((x.left,curr_d+1))
+            if x.right!=None:
+                stack.append(x.right)
+            if x.left!=None:
+                stack.append(x.left)
 
         return val
