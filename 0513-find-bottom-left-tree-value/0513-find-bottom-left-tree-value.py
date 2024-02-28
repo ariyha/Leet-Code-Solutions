@@ -13,7 +13,6 @@ class Solution:
 
         while(stack!=[]):
             x,curr_d = stack.pop()
-            print(x.val,curr_d)
             
             if curr_d>d:
                 d=curr_d
