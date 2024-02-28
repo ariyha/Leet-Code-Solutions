@@ -15,18 +15,17 @@ class Solution:
             x,curr_d = stack.pop()
             print(x.val,curr_d)
             
-            if x in visited:
-                continue
-            
             if curr_d>d:
                 d=curr_d
                 val = x.val
 
             visited.append(x)
             
-            if x.right!=None:
+            if x.right!=None and x.right not in visited:
                 stack.append((x.right,curr_d+1))
-            if x.left!=None:
+                visited.append(x.right)
+            if x.left!=None and x.left not in visited:
+                visited.append(x.left)
                 stack.append((x.left,curr_d+1))
         
         return val
