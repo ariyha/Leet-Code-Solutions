@@ -17,9 +17,7 @@ class Solution:
             if curr_d>d:
                 d=curr_d
                 val = x.val
-
-            visited.append(x)
-            
+                     
             if x.right!=None and x.right not in visited:
                 stack.append((x.right,curr_d+1))
                 visited.append(x.right)
