@@ -6,6 +6,8 @@
 #         self.right = right
 class Solution:
     def isEvenOddTree(self, root: Optional[TreeNode]) -> bool:
+        if not root:
+            return True
         q = [root]
         d=0
         
