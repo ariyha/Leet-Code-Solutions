@@ -6,14 +6,14 @@
 #         self.right = right
 class Solution:
     def isEvenOddTree(self, root: Optional[TreeNode]) -> bool:
-        q = deque([root])
+        q = [root]
         d=0
         
         while(q!=[]):
             prev = None
             k = len(q)
             for _ in range(k):
-                x = q.popleft(0)
+                x = q.pop(0)
                 if (d%2==0 and x.val%2==0) or (d%2!=0 and x.val%2!=0):
                     return False
 
