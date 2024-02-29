@@ -21,16 +21,18 @@ class Solution:
                 if _==0:
                     prev = x.val
                 else:
-                    if d%2==0:
-                        if x.val<=prev:
-                            return False
-                        else:
-                            prev = x.val
-                    else:
-                        if x.val>=prev:
-                            return False
-                        else:
-                            prev = x.val
+                    if(d%2==0 and x.val<=prev) or (d%2!=0 and x.val>=prev):
+                        return False
+                    # if d%2==0:
+                    #     if x.val<=prev:
+                    #         return False
+                    #     else:
+                    #         prev = x.val
+                    # else:
+                    #     if x.val>=prev:
+                    #         return False
+                    #     else:
+                    prev = x.val
 
                 if x.left:
                     q.append(x.left)
