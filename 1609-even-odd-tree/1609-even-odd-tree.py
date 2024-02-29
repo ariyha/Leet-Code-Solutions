@@ -14,10 +14,9 @@ class Solution:
             k = len(q)
             for _ in range(k):
                 x = q.pop(0)
-                if d%2==0 and x.val%2==0:
+                if (d%2==0 and x.val%2==0) or (d%2!=0 and x.val%2!=0):
                     return False
-                if d%2!=0 and x.val%2!=0:
-                    return False
+                
 
                 if prev ==None:
                     prev = x.val
