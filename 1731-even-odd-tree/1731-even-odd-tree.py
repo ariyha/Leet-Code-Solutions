@@ -13,7 +13,6 @@ class Solution:
         d=0
         
         while(q):
-            prev = None
             for _ in range(len(q)):
                 x = q.popleft()
                 if (d%2==0 and x.val%2==0) or (d%2!=0 and x.val%2!=0):
