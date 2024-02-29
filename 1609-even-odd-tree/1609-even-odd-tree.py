@@ -16,26 +16,20 @@ class Solution:
                 x = q.pop(0)
                 if (d%2==0 and x.val%2==0) or (d%2!=0 and x.val%2!=0):
                     return False
-                
 
-                if prev ==None:
+                if _==0:
                     prev = x.val
-                    if x.left!=None:
-                        q.append(x.left)
-                    if x.right!=None:
-                        q.append(x.right)
-                    continue
-                
-                if d%2==0:
-                    if x.val<=prev:
-                        return False
-                    else:
-                        prev = x.val
                 else:
-                    if x.val>=prev:
-                        return False
+                    if d%2==0:
+                        if x.val<=prev:
+                            return False
+                        else:
+                            prev = x.val
                     else:
-                        prev = x.val
+                        if x.val>=prev:
+                            return False
+                        else:
+                            prev = x.val
 
                 if x.left!=None:
                     q.append(x.left)
