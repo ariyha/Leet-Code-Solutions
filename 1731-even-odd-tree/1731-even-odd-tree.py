@@ -8,13 +8,14 @@ class Solution:
     def isEvenOddTree(self, root: Optional[TreeNode]) -> bool:
         if not root:
             return True
-        q = [root]
+        q = deque([root])
+
         d=0
         
-        while(q!=[]):
+        while(q):
             prev = None
             for _ in range(len(q)):
-                x = q.pop(0)
+                x = q.popleft()
                 if (d%2==0 and x.val%2==0) or (d%2!=0 and x.val%2!=0):
                     return False
 
@@ -23,15 +24,6 @@ class Solution:
                 else:
                     if(d%2==0 and x.val<=prev) or (d%2!=0 and x.val>=prev):
                         return False
-                    # if d%2==0:
-                    #     if x.val<=prev:
-                    #         return False
-                    #     else:
-                    #         prev = x.val
-                    # else:
-                    #     if x.val>=prev:
-                    #         return False
-                    #     else:
                     prev = x.val
 
                 if x.left:
