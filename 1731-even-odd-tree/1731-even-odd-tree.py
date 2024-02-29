@@ -9,9 +9,7 @@ class Solution:
         if not root:
             return True
         q = deque([root])
-
         d=0
-        
         while(q):
             for _ in range(len(q)):
                 x = q.popleft()
@@ -30,6 +28,6 @@ class Solution:
                 if x.right:
                     q.append(x.right)
 
-            d+=1
+            d=d+1
         
         return True
