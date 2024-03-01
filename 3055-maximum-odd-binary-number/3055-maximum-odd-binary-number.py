@@ -14,6 +14,6 @@ class Solution:
                     k = '1'+k
             else:
                 k=k+'0'
-            
+
         return k+'1'
                 
