@@ -3,8 +3,8 @@ class Solution:
         ma = float('-inf')
         curr = 0
 
-        for i in range(len(nums)):
-            curr = curr+nums[i]
+        for i in nums:
+            curr = curr+i
             ma = max(ma,curr)
 
             if curr<0:
