@@ -3,7 +3,7 @@ class Solution:
         ma = -100000
         curr = 0
         for i in nums:
-            curr = curr+i
+            curr +=i
             ma = max(ma,curr)
             if curr<0:
                 curr=0
