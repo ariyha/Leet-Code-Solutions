@@ -6,7 +6,6 @@ class Solution:
             curr +=i
             if curr>ma:
                 ma=curr
-            ma = max(ma,curr)
             if curr<0:
                 curr=0
         return ma
