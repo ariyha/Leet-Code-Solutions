@@ -6,5 +6,3 @@ class Solution:
             if l[i][0]-l[i-1][0]>max:
                 max=l[i][0]-l[i-1][0]
         return max
-
-
