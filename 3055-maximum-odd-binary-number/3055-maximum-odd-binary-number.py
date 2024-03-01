@@ -1,6 +1,5 @@
 class Solution:
     def maximumOddBinaryNumber(self, s: str) -> str:
-        s = list(s).sort(reverse=True)
-        k = "".join(s[1:])
-        k=k+'1'
-        return k
+        s = list(s)
+        s.sort(reverse=True)
+        return "".join(s[1:]+['1'])
