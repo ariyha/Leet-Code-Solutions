@@ -7,7 +7,8 @@ class Solution:
         while(j<len(prices)):
             profit = prices[j]-prices[i]
             if profit>0:
-                maxi=max(maxi,profit)
+                if profit>maxi:
+                    profit=maxi
             else:
                 i=j
             j=j+1
