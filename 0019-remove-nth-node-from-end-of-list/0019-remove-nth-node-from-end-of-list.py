@@ -18,7 +18,7 @@ class Solution:
         
         slow.next = slow.next.next
 
-        return head
+        return dummy.next
 
     #     if(self.findlen(head)==n):
     #         head=head.next
