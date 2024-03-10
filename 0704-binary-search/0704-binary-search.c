@@ -14,6 +14,7 @@ int search(int* nums, int n, int target) {
         }
         else{
             low=mid+1;
+            continue;
         }
     }
     return -1;
