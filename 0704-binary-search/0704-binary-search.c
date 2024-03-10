@@ -17,6 +17,4 @@ int search(int* nums, int n, int target) {
         }
     }
     return -1;
-
-    
 }
