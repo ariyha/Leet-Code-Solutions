@@ -1,13 +1,12 @@
-# Definition for a binary tree node.
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val
         self.left = left
         self.right = right
-        self.parent = None
 class Solution:
     def createBinaryTree(self, descriptions: List[List[int]]) -> Optional[TreeNode]:
         created = {}
+        child = set()
         for i,j,k in descriptions:
             if i not in created:
                 node = TreeNode(i)
@@ -25,11 +24,8 @@ class Solution:
                 node.left=childnode
             else:
                 node.right=childnode
-            childnode.parent = node
+            child.add(j)
         
-        x = created[descriptions[0][0]]
-
-        while(x.parent):
-            x = x.parent
-        
-        return x
+        for i,_,_ in descriptions:
+            if i not in child:
+                return created[i]
