@@ -21,7 +21,7 @@ class Solution:
             else:
                 childnode = TreeNode(i[1])
                 created[i[1]] = childnode
-                     
+
             if i[2]:
                 node.left=childnode
             else:
