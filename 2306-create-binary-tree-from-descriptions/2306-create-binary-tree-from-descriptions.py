@@ -4,7 +4,7 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-        self.ischild = False
+        self.parent = None
 class Solution:
     def createBinaryTree(self, descriptions: List[List[int]]) -> Optional[TreeNode]:
         created = {}
@@ -21,17 +21,18 @@ class Solution:
             else:
                 childnode = TreeNode(i[1])
                 created[i[1]] = childnode
-            childnode.ischild = True
-            
-            if not node.ischild:
-                root = node
-            
-
-            print(root.val)
-
+                     
             if i[2]:
                 node.left=childnode
             else:
                 node.right=childnode
+            childnode.parent = node
         
-        return created[38]
+        x = descriptions[0][0]
+
+        x = created[x]
+
+        while(x.parent):
+            x = x.parent
+        
+        return x
