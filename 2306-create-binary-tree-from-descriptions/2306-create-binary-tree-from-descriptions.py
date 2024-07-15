@@ -8,29 +8,26 @@ class TreeNode:
 class Solution:
     def createBinaryTree(self, descriptions: List[List[int]]) -> Optional[TreeNode]:
         created = {}
-        root = None
-        for i in descriptions:
-            if i[0] not in created:
-                node = TreeNode(i[0])
-                created[i[0]] = node
+        for i,j,k in descriptions:
+            if i not in created:
+                node = TreeNode(i)
+                created[i] = node
             else:
-                node = created[i[0]]
+                node = created[i]
 
-            if i[1] in created:
-                childnode = created[i[1]]
+            if j in created:
+                childnode = created[j]
             else:
-                childnode = TreeNode(i[1])
-                created[i[1]] = childnode
+                childnode = TreeNode(j)
+                created[j] = childnode
 
-            if i[2]:
+            if k:
                 node.left=childnode
             else:
                 node.right=childnode
             childnode.parent = node
         
-        x = descriptions[0][0]
-
-        x = created[x]
+        x = created[descriptions[0][0]]
 
         while(x.parent):
             x = x.parent
