@@ -20,7 +20,6 @@ class Solution:
                 path[x.right.val] = path[x.val] + 'R'
                 tovisit.append(x.right)
 
-
             if x.val!=startValue and x.val!=destValue:
                 del path[x.val]
             else:
@@ -36,9 +35,7 @@ class Solution:
             i=i+1
 
         a = a[i::]
+        s = 'U'*len(a)
         b = b[i:]
-        s=''
-        for i in a:
-            s = s+'U'
 
         return s+b
