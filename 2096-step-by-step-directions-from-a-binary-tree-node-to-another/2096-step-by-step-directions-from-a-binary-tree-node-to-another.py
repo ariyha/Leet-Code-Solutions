@@ -5,7 +5,7 @@ class Solution:
         path = {root.val:''}
 
         while tovisit:
-            x = tovisit.pop()
+            x = tovisit.pop(0)
             if x.left:
                 path[x.left.val] = path[x.val]+'L'
                 tovisit.append(x.left)
@@ -27,8 +27,8 @@ class Solution:
                 break
             i=i+1
 
-        a = a[i::]
-        s = 'U'*len(a)
+        a = a[i:]
         b = b[i:]
+        s = 'U'*len(a)
 
         return s+b
