@@ -12,8 +12,6 @@ class Solution:
         path = {root.val:''}
 
         while tovisit:
-            if val==2:
-                break
             x = tovisit.pop()
             if x.left:
                 path[x.left.val] = path[x.val]+'L'
@@ -22,14 +20,12 @@ class Solution:
                 path[x.right.val] = path[x.val] + 'R'
                 tovisit.append(x.right)
 
-            if x.val == startValue:
-                val+=1
-
-            if x.val == destValue:
-                val+=1          
 
             if x.val!=startValue and x.val!=destValue:
-                del path[x.val]        
+                del path[x.val]
+            else:
+                if startValue in path and destValue in path:
+                    break 
         
         a = path[startValue]
         b = path[destValue]
