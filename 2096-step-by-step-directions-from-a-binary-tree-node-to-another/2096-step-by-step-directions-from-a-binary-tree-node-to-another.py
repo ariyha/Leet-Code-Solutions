@@ -1,7 +1,6 @@
 class Solution:
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
         tovisit = [root]
-        val=0
         path = {root.val:''}
 
         while tovisit:
@@ -17,7 +16,7 @@ class Solution:
                 del path[x.val]
             else:
                 if startValue in path and destValue in path:
-                    break 
+                    break
         
         a = path[startValue]
         b = path[destValue]
@@ -30,7 +29,6 @@ class Solution:
             i=i+1
             
 
-        b = b[i:]
-        s = 'U'*(len(a)-i)
+        b = b[i:] + 'U'*(len(a)-i)
 
-        return s+b
+        return b
