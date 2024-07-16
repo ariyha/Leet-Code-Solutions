@@ -27,8 +27,7 @@ class Solution:
                 break
             i=i+1
 
-        a = a[i:]
         b = b[i:]
-        s = 'U'*len(a)
+        s = 'U'*(len(a)-i)
 
         return s+b
