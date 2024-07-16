@@ -5,7 +5,6 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    @lru_cache
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
         tovisit = [root]
         val=0
