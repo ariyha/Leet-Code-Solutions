@@ -21,8 +21,9 @@ class Solution:
         
         a = path[startValue]
         b = path[destValue]
+        n = min(len(a),len(b))
         i=0
-        while(i<min(len(a),len(b))):
+        while(i<n):
             if a[i]!=b[i]:
                 break
             i=i+1
