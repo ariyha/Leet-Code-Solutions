@@ -8,9 +8,12 @@ class Solution:
     @lru_cache
     def getDirections(self, root: Optional[TreeNode], startValue: int, destValue: int) -> str:
         tovisit = [root]
+        val=0
         path = {root.val:''}
 
         while tovisit:
+            if val==2:
+                break
             x = tovisit.pop()
             if x.left:
                 path[x.left.val] = path[x.val]+'L'
@@ -18,6 +21,12 @@ class Solution:
             if x.right:
                 path[x.right.val] = path[x.val] + 'R'
                 tovisit.append(x.right)
+
+            if x.val == startValue:
+                val+=1
+
+            if x.val == destValue:
+                val+=1          
 
             if x.val!=startValue and x.val!=destValue:
                 del path[x.val]        
@@ -30,9 +39,8 @@ class Solution:
                 break
             i=i+1
 
-        a = a[i:]
+        a = a[i::]
         b = b[i:]
-        a = a[::-1]
         s=''
         for i in a:
             s = s+'U'
