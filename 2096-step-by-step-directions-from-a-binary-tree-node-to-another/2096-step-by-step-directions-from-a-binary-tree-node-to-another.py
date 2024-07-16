@@ -23,10 +23,12 @@ class Solution:
         b = path[destValue]
         n = min(len(a),len(b))
         i=0
-        while(i<n):
+
+        for i in range(n):
             if a[i]!=b[i]:
                 break
             i=i+1
+            
 
         b = b[i:]
         s = 'U'*(len(a)-i)
