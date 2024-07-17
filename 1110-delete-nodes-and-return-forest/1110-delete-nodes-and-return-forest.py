@@ -3,15 +3,11 @@ class TreeNode:
         self.val = val
         self.left = left
         self.right = right
-        self.root = False
-        self.parent = None
-        self.lr  =0
 
 class Solution:
     def delNodes(self, root: Optional[TreeNode], to_delete: List[int]) -> List[TreeNode]:
         root.root = True
         root.lr = 100
-        print(root)
         tovisit = [root]
         nodes = []
 
