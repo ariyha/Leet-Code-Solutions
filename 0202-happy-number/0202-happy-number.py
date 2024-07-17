@@ -9,7 +9,6 @@ class Solution:
             n = str(n)
             n = sum([int(i)**2 for i in n])
             
-        print(known)
         if n==1 or n==7:
             return True
         
