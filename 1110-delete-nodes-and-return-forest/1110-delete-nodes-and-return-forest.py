@@ -39,7 +39,6 @@ class Solution:
                 tovisit.append(x.left)
                 if x.left.val in to_delete:
                     x.left = None
-        
     
         return nodes
 
