@@ -21,24 +21,21 @@ class Solution:
                 if x.left:
                     x.left.root = True
                     tovisit.append(x.left)
+            else:
+                if x.root:
+                    nodes.append(x)
                 
-                continue
+                if x.right:
+                    x.right.root = False
+                    tovisit.append(x.right)
+                    if x.right.val in to_delete:
+                        x.right = None
 
-            if x.root:
-                nodes.append(x)
-            
-            if x.right:
-                x.right.root = False
-                tovisit.append(x.right)
-                if x.right.val in to_delete:
-                    x.right = None
-
-            
-            if x.left:
-                x.left.root = False
-                tovisit.append(x.left)
-                if x.left.val in to_delete:
-                    x.left = None
+                if x.left:
+                    x.left.root = False
+                    tovisit.append(x.left)
+                    if x.left.val in to_delete:
+                        x.left = None
     
         return nodes
 
