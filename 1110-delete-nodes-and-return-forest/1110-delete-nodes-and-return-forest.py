@@ -17,9 +17,6 @@ class Solution:
 
         while(tovisit):
             x = tovisit.pop()
-            print(x)
-            print(x.val,end=' ')
-            print(x.root)
 
             if x.val in to_delete:
                 if x.lr ==1:
@@ -30,14 +27,12 @@ class Solution:
                     pass
         
                 if x.right:
-                    print('right',x.right.val)
                     x.right.root = True
                     x.right.parent = x
                     x.right.lr = 1
                     tovisit.append(x.right)
                 
                 if x.left:
-                    print('left',x.left.val)
                     x.left.root = True
                     x.left.parent = x
                     x.left.lr = 2
