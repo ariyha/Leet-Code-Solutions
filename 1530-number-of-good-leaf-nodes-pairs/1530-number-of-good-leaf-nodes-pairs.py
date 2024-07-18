@@ -34,11 +34,8 @@ class Solution:
                         break
                     i=i+1
                 
-                r1 = 'U'*len(r1)
                 x = len(r1[i:]+r2[i:])
                 if x<=distance:
                     count+=1
-                    print(x1,x2)
-                    print(r1[i:]+r2[i:])
 
         return count
