@@ -23,14 +23,12 @@ class Solution:
                 tovisit.append([x.left,route+'L'])
 
         count = 0
-        print(nodes)
         for k in range(len(nodes)):
             for j in range(k+1,len(nodes)):
                 x1,r1 = nodes[k]
                 x2,r2 = nodes[j]
                 i=0
 
-                print(x1,r1,x2,r2)
                 while(i<min(len(r1),len(r2))):
                     if r1[i]!=r2[i]:
                         break
