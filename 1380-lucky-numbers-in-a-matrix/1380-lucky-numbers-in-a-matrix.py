@@ -5,12 +5,10 @@ class Solution:
             mins.append(min(matrix[i]))
         
         maxs = []
-        
         for i in range(len(matrix[0])):
-            maxi = float(-inf)
+            maxi = -10000000
             for j in range(len(matrix)):
                 maxi = max(matrix[j][i],maxi)
-            
             maxs.append(maxi)
 
         out =[]
@@ -20,4 +18,4 @@ class Solution:
                     if matrix[i][j]==mins[i] and matrix[i][j]==maxs[j]:
                         out.append(matrix[i][j])
 
-        return out        
+        return out
