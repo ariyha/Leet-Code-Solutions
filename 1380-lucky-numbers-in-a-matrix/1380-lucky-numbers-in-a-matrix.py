@@ -13,7 +13,7 @@ class Solution:
 
         for i in range(len(matrix)):
             for j in range(len(matrix[0])):
-                    if matrix[i][j]==mins[i] and matrix[i][j]==maxs[j]:
+                v=matrix[i][j]
+                    if v==mins[i] and v==maxs[j]:
                         out.append(matrix[i][j])
-
         return out
