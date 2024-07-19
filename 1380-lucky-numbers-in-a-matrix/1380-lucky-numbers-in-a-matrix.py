@@ -7,7 +7,7 @@ class Solution:
         columns = list(zip(*matrix))
         maxs = []
         for i in range(len(columns)):
-            maxs.append(max(columns[i])))
+            maxs.append(max(columns[i]))
 
         out =[]
 
