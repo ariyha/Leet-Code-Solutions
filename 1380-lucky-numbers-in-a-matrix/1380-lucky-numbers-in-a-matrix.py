@@ -4,12 +4,10 @@ class Solution:
         for i in range(len(matrix)):
             mins.append(min(matrix[i]))
         
+        columns = list(zip(*matrix))
         maxs = []
-        for i in range(len(matrix[0])):
-            maxi = -10000000
-            for j in range(len(matrix)):
-                maxi = max(matrix[j][i],maxi)
-            maxs.append(maxi)
+        for i in range(len(columns)):
+            maxs.append(max(columns[i])))
 
         out =[]
 
