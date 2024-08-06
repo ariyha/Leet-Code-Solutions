@@ -6,7 +6,6 @@ class Solution:
         nums = sorted(nums.items(),key=lambda x:x[1],reverse=True)
         out=0
 
-        print(nums)
         for i in range(len(nums)):
             out = out + nums[i][1]*(i//8 + 1)
 
